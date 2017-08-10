@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "343805576549",
+    "firebase_url": "https://notificaciones-6ec7d.firebaseio.com",
+    "project_id": "notificaciones-6ec7d",
+    "storage_bucket": "notificaciones-6ec7d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:343805576549:android:9bb29b82b1538a72",
+        "android_client_info": {
+          "package_name": "com.omar_hidrogo_local.notificacionfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "343805576549-h6blu9i338fil1i3dk7hbuffkc2i29jq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.omar_hidrogo_local.notificacionfirebase",
+            "certificate_hash": "3a0e88e1b0e7e2282736fb474e833fd75c2b8138"
+          }
+        },
+        {
+          "client_id": "343805576549-r39m43bkc65r0l9aqvmftmb9s8hkt1i4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaV-N5O8DnOJ468044Tsv78ow8vfjPL6U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "343805576549-r39m43bkc65r0l9aqvmftmb9s8hkt1i4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
