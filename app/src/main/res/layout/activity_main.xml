@@ -6,13 +6,30 @@
     android:layout_height="match_parent"
     tools:context="com.omar_hidrogo_local.notificacionfirebase.MainActivity">
 
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Soy un perro da un toque al gato"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <ImageView
+        android:id="@+id/animalFoto"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/gato"
+        android:layout_centerInParent="true"/>
+
     <Button
         android:id="@+id/btnLanzarNificacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="lanzar_notificacion"
-        android:layout_centerHorizontal="true"
-        android:onClick="lanzarNotificacion"/>
+        android:text="Recibir notificaciones"
+        android:layout_alignParentBottom="true"
+        android:onClick="enviarToken"
+        android:layout_centerHorizontal="true"/>
 
 
 </RelativeLayout>
