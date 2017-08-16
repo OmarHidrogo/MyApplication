@@ -20,7 +20,8 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:src="@drawable/gato"
-        android:layout_centerInParent="true"/>
+        android:layout_centerInParent="true"
+        android:onClick="toqueAnimal"/>
 
     <Button
         android:id="@+id/btnLanzarNificacion"

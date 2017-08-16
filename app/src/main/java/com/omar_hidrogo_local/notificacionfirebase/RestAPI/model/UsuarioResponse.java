@@ -7,10 +7,12 @@ package com.omar_hidrogo_local.notificacionfirebase.RestAPI.model;
 public class UsuarioResponse {
     private String id;
     private String token;
+    private String animal;
 
-    public UsuarioResponse(String id, String token) {
+    public UsuarioResponse(String id, String token,String animal) {
         this.id = id;
         this.token = token;
+        this.animal= animal;
     }
 
     public UsuarioResponse() {
@@ -30,5 +32,13 @@ public class UsuarioResponse {
 
     public void setToken(String token) {
         this.token = token;
+    }
+
+    public String getAnimal() {
+        return animal;
+    }
+
+    public void setAnimal(String animal) {
+        this.animal = animal;
     }
 }

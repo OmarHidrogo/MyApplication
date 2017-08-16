@@ -23,7 +23,9 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    private static final String TAG = "MainActivity";
+    private static final String ANIMAL_EMISOR = "perro";
+    private static final String ANIMAL_RECEPTOR = "gato";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         Log.d("TOKEN", token);
         RestApiAdapter restApiAdapter = new RestApiAdapter();
         Endpoints endpoints = restApiAdapter.establecerConexionRestAPI();
-        Call<UsuarioResponse> usuarioResponseCall = endpoints.registrarTokenID(token);
+        Call<UsuarioResponse> usuarioResponseCall = endpoints.registrarTokenID(token,ANIMAL_EMISOR);
 
         usuarioResponseCall.enqueue(new Callback<UsuarioResponse>() {
             @Override
@@ -66,6 +68,28 @@ public class MainActivity extends AppCompatActivity {
                UsuarioResponse usuarioResponse = response.body();
                 Log.d("ID_FIREBASE", usuarioResponse.getId());
                 Log.d("TOKEN_FIREBASE", usuarioResponse.getToken());
+            }
+
+            @Override
+            public void onFailure(Call<UsuarioResponse> call, Throwable t) {
+
+            }
+        });
+    }
+
+    public void toqueAnimal(View v){
+        Log.d("TOQUE_ANIMAL", "true");
+        final UsuarioResponse usuarioResponse = new UsuarioResponse("-KrgAHBN7GUjtHwGGJly","123",ANIMAL_RECEPTOR);
+        RestApiAdapter restApiAdapter = new RestApiAdapter();
+        Endpoints endpoints = restApiAdapter.establecerConexionRestAPI();
+        Call<UsuarioResponse> usuarioResponseCall = endpoints.toqueanimal(usuarioResponse.getId(),ANIMAL_EMISOR);/*usuarioResponse.getAnimal());*/
+        usuarioResponseCall.enqueue(new Callback<UsuarioResponse>() {
+            @Override
+            public void onResponse(Call<UsuarioResponse> call, Response<UsuarioResponse> response) {
+                UsuarioResponse usuarioResponse1 = response.body();
+                Log.d("ID_FIREBASE", usuarioResponse1.getId());
+                Log.d("TOKEN_FIREBASE", usuarioResponse1.getToken());
+                Log.d("ANIMAL_FIREBASE", usuarioResponse1.getAnimal());
             }
 
             @Override
