@@ -10,7 +10,7 @@
         android:id="@+id/tvTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Soy un perro da un toque al gato"
+        android:text="Soy un gato  da un toque al perroCF"
         android:textSize="26sp"
         android:textStyle="bold"
         android:gravity="center"/>
@@ -19,7 +19,7 @@
         android:id="@+id/animalFoto"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:src="@drawable/gato"
+        android:src="@drawable/p2"
         android:layout_centerInParent="true"
         android:onClick="toqueAnimal"/>
 

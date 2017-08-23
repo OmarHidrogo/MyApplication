@@ -24,7 +24,7 @@ import retrofit2.Response;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
-    private static final String ANIMAL_EMISOR = "perro";
+    private static final String ANIMAL_EMISOR = "perroCF";
     private static final String ANIMAL_RECEPTOR = "gato";
 
     @Override
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void toqueAnimal(View v){
         Log.d("TOQUE_ANIMAL", "true");
-        final UsuarioResponse usuarioResponse = new UsuarioResponse("-KrgAHBN7GUjtHwGGJly","123",ANIMAL_RECEPTOR);
+        final UsuarioResponse usuarioResponse = new UsuarioResponse("-KsEMtq4X-ccOC_71D9R","123",ANIMAL_RECEPTOR);
         RestApiAdapter restApiAdapter = new RestApiAdapter();
         Endpoints endpoints = restApiAdapter.establecerConexionRestAPI();
         Call<UsuarioResponse> usuarioResponseCall = endpoints.toqueanimal(usuarioResponse.getId(),ANIMAL_EMISOR);/*usuarioResponse.getAnimal());*/

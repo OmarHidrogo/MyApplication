@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">NotificacionFirebase</string>
+    <string name="texto_accion_toque">Devuelve el toque</string>
 </resources>
